@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Vision For Students - Volunteer Sign-UP Form</title>
+	
+    <style>
+	body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto; /* Center the main content */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+p, label, input, select, textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+table td {
+    background-color: #fdfdfd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    input, textarea, select {
+        width: 100%;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next line if needed */
+    gap: 10px; /* Space between each checkbox */
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center; /* Vertically center align the checkbox with the text */
+}
+	</style>
+</head>
+<body>
+<main>
+    <div class="form-container">
+        <h2><strong>Clear Vision For Students - Volunteer Sign-UP Form</strong></h2>
+        <form id="signupForm">
+            <fieldset>
+                <legend><strong>Section A: Personal Information</strong></legend>
+                <label for="fullName">Full Name <span style="color: red;">*</span></label>
+                <input type="text" id="fullName" name="fullName" required>
+                
+                <label for="surname">Surname <span style="color: red;">*</span></label>
+                <input type="text" id="surname" name="surname" required>
+                
+                <label for="dob">DOB <span style="color: red;">*</span></label>
+                <input type="date" id="dob" name="dob" required>
+                
+                <label for="gender">Gender <span style="color: red;">*</span></label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="nationality">Nationality <span style="color: red;">*</span></label>
+                <select id="nationality" name="nationality" required>
+                    <option value="" disabled selected>Select your nationality</option>
+                    <option value="african">African</option>
+                    <option value="white">White</option>
+                    <option value="indian">Indian</option>
+                    <option value="coloured">Coloured</option>
+                </select>
+
+                <label for="languagesSpoken">Languages Spoken <span style="color: red;">*</span></label>
+                <select id="languagesSpoken" name="languagesSpoken" required>
+                    <option value="" disabled selected>Select your spoken language</option>
+                    <option value="afrikaans">Afrikaans</option>
+                    <option value="english">English</option>
+                    <option value="isindebele">isiNdebele</option>
+                    <option value="isixhosa">isiXhosa</option>
+                    <option value="isizulu">isiZulu</option>
+                    <option value="sesotho">Sesotho</option>
+                    <option value="sesothosaLeboa">Sesotho sa Leboa (Northern Sotho)</option>
+                    <option value="setswana">Setswana</option>
+                    <option value="siswati">siSwati</option>
+                    <option value="tshivenda">Tshivenda</option>
+                    <option value="xitsonga">Xitsonga</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>Section B: Contact Details</strong></legend>
+                <label for="email">Email Address <span style="color: red;">*</span></label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number <span style="color: red;">*</span></label>
+                <input type="tel" id="phone" name="phone" pattern="\+27[0-9]{9}" required>
+                
+                <label for="emergencyContact">Emergency Contact <span style="color: red;">*</span></label>
+                <input type="tel" id="emergencyContact" name="emergencyContact" pattern="\+27[0-9]{9}" required>
+                
+                <label for="address">Physical Address <span style="color: red;">*</span></label>
+                <textarea id="address" name="address" rows="4" cols="50" required></textarea>
+                
+                <label for="contactMethod">Preferred Contact Method <span style="color: red;">*</span></label>
+                <select id="contactMethod" name="contactMethod" required>
+                    <option value="" disabled selected>Select your preferred method</option>
+                    <option value="email">Email</option>
+                    <option value="phone_call">Phone Call</option>
+                    <option value="sms">SMS</option>
+                </select>
+
+                <label for="yearOfStudy">Which year are you doing? <span style="color: red;">*</span></label>
+                <select id="yearOfStudy" name="yearOfStudy" required>
+                    <option value="" disabled selected>Select your year of study</option>
+                    <option value="year_0">Year 0</option>
+                    <option value="first_year">First Year</option>
+                    <option value="second_year">Second Year</option>
+                    <option value="third_year">Third Year</option>
+                    <option value="postgraduate">Postgraduate</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>Section C: Volunteering Interest</strong></legend>
+                <label>What are you interested in volunteering? <span style="color: red;">*</span></label><br>
+				<div class="checkbox-group">
+                <lable><input type="checkbox" id="interest1" name="interest" value="Eye Testing Assistance"> Eye Testing Assistance<br>
+                <lable><input type="checkbox" id="interest2" name="interest" value="Screening Coordination"> Screening Coordination<br>
+                <lable><input type="checkbox" id="interest3" name="interest" value="Logistics Support"> Logistics Support<br>
+                
+                <label for="otherDetails">If Other:</label>
+                <input type="text" id="otherDetails" name="otherDetails" placeholder="Specify here..."><br>
+</div>
+</fieldset>
+<fieldset>
+
+                <label>Days Available <span style="color: red;">*</span></label><br>
+				<div class="checkbox-group">
+                <input type="checkbox" id="day1" name="days" value="Monday"> Monday
+                <input type="checkbox" id="day2" name="days" value="Tuesday"> Tuesday
+                <input type="checkbox" id="day3" name="days" value="Wednesday"> Wednesday
+                <input type="checkbox" id="day4" name="days" value="Thursday"> Thursday
+                <input type="checkbox" id="day5" name="days" value="Friday"> Friday
+                <input type="checkbox" id="day6" name="days" value="Saturday"> Saturday
+                <input type="checkbox" id="day7" name="days" value="Sunday"> Sunday<br>
+</div>
+</fieldset>
+                <label for="time">Time of Day Available <span style="color: red;">*</span></label><br>
+                <select id="time" name="time" required>
+                    <option value="" disabled selected>Select your available time</option>
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</main>
+
+<footer>
+    <h3>Submitted Volunteer Records:</h3>
+    <table id="volunteerTable">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Surname</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Nationality</th>
+                <th>Languages Spoken</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Emergency Contact</th>
+                <th>Address</th>
+                <th>Contact Method</th>
+                <th>Year of Study</th>
+                <th>Volunteer Interests</th>
+                <th>Other Details</th>
+                <th>Days Available</th>
+                <th>Time Available</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Volunteer data will be inserted here -->
+        </tbody>
+    </table>
+</footer>
+<script>
+document.getElementById("signupForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const fullName = document.getElementById("fullName").value;
+    const surname = document.getElementById("surname").value;
+    const dob = document.getElementById("dob").value;
+    const gender = document.getElementById("gender").value;
+    const nationality = document.getElementById("nationality").value;
+    const languagesSpoken = document.getElementById("languagesSpoken").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const emergencyContact = document.getElementById("emergencyContact").value;
+    const address = document.getElementById("address").value;
+    const contactMethod = document.getElementById("contactMethod").value;
+    const yearOfStudy = document.getElementById("yearOfStudy").value;
+
+    let interests = [];
+    if (document.getElementById('interest1').checked) interests.push('Eye Testing Assistance');
+    if (document.getElementById('interest2').checked) interests.push('Screening Coordination');
+    if (document.getElementById('interest3').checked) interests.push('Logistics Support');
+    const otherDetails = document.getElementById("otherDetails").value;
+
+    let daysAvailable = [];
+    if (document.getElementById('day1').checked) daysAvailable.push('Monday');
+    if (document.getElementById('day2').checked) daysAvailable.push('Tuesday');
+    if (document.getElementById('day3').checked) daysAvailable.push('Wednesday');
+    if (document.getElementById('day4').checked) daysAvailable.push('Thursday');
+    if (document.getElementById('day5').checked) daysAvailable.push('Friday');
+    if (document.getElementById('day6').checked) daysAvailable.push('Saturday');
+    if (document.getElementById('day7').checked) daysAvailable.push('Sunday');
+
+    const time = document.getElementById("time").value;
+
+    // Prepare the data to send
+    const formData = {
+        fullName,
+        surname,
+        dob,
+        gender,
+        nationality,
+        languagesSpoken,
+        email,
+        phone,
+        emergencyContact,
+        address,
+        contactMethod,
+        yearOfStudy,
+        interests: interests.join(", "),
+        otherDetails,
+        daysAvailable: daysAvailable.join(", "),
+        time
+    };
+
+    // Send the data to Google Apps Script
+    fetch("https://script.google.com/macros/s/AKfycbyzauzp7DoBBHH2k3LnaPSQ9ILpMgCjfqBmdPSNhJmqT-yks0l-OSLULl9Ev1I2jk3k/exec", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Success:", data);
+        // Add the new row to the table
+        const table = document.getElementById('volunteerTable').getElementsByTagName('tbody')[0];
+        const newRow = table.insertRow();
+        newRow.innerHTML = `
+            <td>${fullName}</td>
+            <td>${surname}</td>
+            <td>${dob}</td>
+            <td>${gender}</td>
+            <td>${nationality}</td>
+            <td>${languagesSpoken}</td>
+            <td>${email}</td>
+            <td>${phone}</td>
+            <td>${emergencyContact}</td>
+            <td>${address}</td>
+            <td>${contactMethod}</td>
+            <td>${yearOfStudy}</td>
+            <td>${interests.join(", ")}</td>
+            <td>${otherDetails}</td>
+            <td>${daysAvailable.join(", ")}</td>
+            <td>${time}</td>
+        `;
+
+        // Reset the form after successful submission
+        document.getElementById("signupForm").reset();
+    })
+    .catch((error) => {
+        console.error("Error:", error);
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate to Clear Vision for Students</title>
+    <style>
+	body, p, form, input, textarea, select {
+    margin: 0;
+    padding: 0;
+	
+}
+h1,h2 {
+color: #4CAF50;
+
+}	
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+/* Main content styling */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+/* Donation info section */
+.donation-info {
+    margin-bottom: 20px;
+}
+
+.donation-info h2 {
+    color: #333;
+}
+
+/* Form styling */
+form {
+    margin-top: 20px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #4CAF50;
+}
+
+/* Footer styles */
+footer {
+    background: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+	</style>
+</head>
+<body>
+  
+
+    <main>
+        <section class="donation-form">
+            <h2>Donation Form</h2>
+            <form action="details_entry.php" method="post">
+                <fieldset>
+                    <legend><strong>Donor Information</strong></legend>
+                    <label for="full_name">Full Name <span style="color: red;"></span></label>
+                    <input type="text" id="full_name" name="full_name" required>
+                    
+                    <label for="email">Email Address <span style="color: red;">*</span></label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="phone" id="phone" name="phone">
+                    
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="4" cols="50" placeholder="Enter your address here..."></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend><strong>Donation Details</strong></legend>
+                    <label for="amount">Donation Amount <span style="color: red;">*</span></label>
+                    <input type="number" id="amount" name="amount" min="1" required>
+                    
+                    <label for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod" name="paymentMethod" required>
+                        <option value="credit_card">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank_transfer">Bank Transfer</option>
+                    </select>
+                </fieldset>
+<input type="submit" name="save" value="Submit" style="font-size:20px">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Clear Vision for Students. All rights reserved.</p>
+        <a href="index.html">Back to Home Page</a>
+    </footer>
+</body>
+</html>

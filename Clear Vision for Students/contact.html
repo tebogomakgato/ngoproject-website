@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <style>
+	.address-box {
+            background-color: #4CAF50;
+            color: white;
+            width: 450px ;
+            padding: 10px;
+            box-sizing: border-box;
+	
+        }
+		main {
+			max-width: 800px;
+			margin: 20px auto;
+			background-color: #fff;
+			padding: 20px;
+			box-shodow:  0 0 10px rgba(0, 0, 0 0.1);
+		}
+	
+        
+        .map-box iframe {
+            width: 600px;
+            height: 450px;
+            border: 0;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: no-space;
+            margin-top: 20px;
+        }
+
+        input[type=text], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 10%;
+            background-color: #4CAF50;;
+            color: white;
+            padding: 7px;
+            border: none;
+            border-radius: 1px;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            color:#4CAF50; ;
+        }
+		body{
+			display: flex;
+			justify-content: center;
+			align-items;
+			height: 100vh;
+			margin: 0;
+		}
+		p {
+			front-size: 200px
+			text-align: center;
+		}
+
+        div {
+            border-radius: 5px;
+            background-color: white;
+            padding: 8px;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 10px;
+            margin-right: 10px;
+        }
+
+        .form-group:last-child {
+            margin-right: 0;
+        }
+
+        .message-box {
+            margin-top: 20px;
+        }
+		main {
+		padding: 10px;
+		}
+		.project-description {
+			text-align: center 
+			font-size:2.0 em;
+			color: #333;
+			margin:10 px 0 20px;
+			padding: 0 15px;
+	</style>
+</head>
+<body>
+   
+	<main>
+<div class="form-container">
+    <h1>CONTACT US</h1>
+    <p style="text-align: center;"> Don’t hesitate to contact us with any queries, questions or comments.</p>
+    <div class="contact-container">
+        <div class="address-box">
+            <h2>Find us at the following address:</h2>
+            <p>Hanover St</p>
+            <p>District Six</p>
+            <p>Cape Town</p>
+            <p>7925</p>
+            <p>(+27)812467453</p>
+            <p>Clearvisionforstudents@cput.com</p>
+        </div>
+        <div class="map-box">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.410954841679!2d18.429518840114692!3d-33.930556922371686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5d814a3cd119%3A0x92b08d2cd701eaa3!2sCape%20Peninsula%20University%20of%20Technology%20-%20District%20Six%20Campus!5e0!3m2!1sen!2sza!4v1727897327960!5m2!1sen!2sza" 
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+   
+    <p>*All the fields are required</p>
+    <form id="contact-UsForm" action="contact-UsForm">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="Name">First name: <span style="color: red;">*</span></label>
+                <input type="text" id="Name" name="Firstname" placeholder="Your name...">
+                <div id="nameError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="Surname">Last name:  <span style="color: red;">*</span></label>
+                <input type="text" id="Surname" name="Lastname" placeholder="Your last name...">
+                <div id="surnameError" class="error"></div> 
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="email">Email: <span style="color: red;">*</span></label>
+                <input type="text" id="email" name="Email" placeholder="Enter valid email address..." required>
+                <div id="emailError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject: <span style="color: red;">*</span></label>
+                <select id="subject" name="subject">
+                    <option value="our services">Our services</option>
+                    <option value="volunteer enquiry">Volunteer enquiry</option>
+                    <option value="donation enquiry">Donation enquiry</option>
+                    <option value="general enquiry">General enquiry</option>
+                </select>
+                <div id="subjectError" class="error"></div>
+            </div>
+        </div>
+
+        <div class="form-group message-box">
+            <label for="message">Your message: <span style="color: red;">*</span></label>
+            <textarea id="message" name="message" placeholder="Your message..." style="height: 200px; width: 100%;" required></textarea>
+            <div id="messageError" class="error"></div>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</main>
+<script>
+    document.getElementById('contact-UsForm').onsubmit = function(event) {
+        const name = document.getElementById('Name').value;
+        const surname = document.getElementById('Surname').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        document.getElementById('nameError').textContent = '';
+        document.getElementById('surnameError').textContent = '';
+        document.getElementById('emailError').textContent = '';
+        document.getElementById('subjectError').textContent = '';
+        document.getElementById('messageError').textContent = '';
+
+        let valid = true;
+
+        if (!name) {
+            document.getElementById('nameError').textContent = 'Name is required.';
+            valid = false;
+        }
+
+        if (!surname) {
+            document.getElementById('surnameError').textContent = 'Last name is required.';
+            valid = false;
+        }
+
+        if (!email || !validateEmail(email)) {
+            document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+            valid = false;
+        }
+
+        if (!subject) {
+            document.getElementById('subjectError').textContent = 'Subject is required.';
+            valid = false;
+        }
+
+        if (!message) {
+            document.getElementById('messageError').textContent = 'Message is required.';
+            valid = false;
+        }
+
+        if (!valid) {
+            event.preventDefault(); 
+        }
+    };
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+</script>
+</html>

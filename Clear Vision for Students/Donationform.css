@@ -1,0 +1,88 @@
+/* Basic reset for margins and padding */
+body, p, form, input, textarea, select {
+    margin: 0;
+    padding: 0;
+	
+}
+h1,h2 {
+color: #4CAF50;
+
+}	
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+/* Main content styling */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+/* Donation info section */
+.donation-info {
+    margin-bottom: 20px;
+}
+
+.donation-info h2 {
+    color: #333;
+}
+
+/* Form styling */
+form {
+    margin-top: 20px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #4CAF50;
+}
+
+/* Footer styles */
+footer {
+    background: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Sight for Students - Projects</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif; 
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 20px;
+			color: #4CAF50;
+        }
+
+        h2 {
+            font-size: 1.5em; 
+            margin: 10px 0;
+        }
+
+        .projects {
+            padding: 20px; 
+        }
+
+        .project-grid {
+            display: flex; 
+            justify-content: space-around; 
+            flex-wrap: wrap; 
+        }
+
+        .project {
+            background-color: lightgray; 
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px; 
+            flex: 1; 
+            max-width: 300px;
+            text-align: center; 
+        }
+
+        .project-description {
+            text-align: center; 
+            font-size: 1.2em; 
+            color: #333; 
+            margin: 10px 0 20px; 
+            padding: 0 15px; 
+        }
+
+        .project-image {
+            width: 100%; 
+            height: auto; 
+            border-radius: 10px;
+            margin-bottom: 10px; 
+        }
+
+        .more-content {
+            display: none; 
+            margin-top: 10px;
+            font-size: 1em;
+            color: #000000;
+        }
+
+        .learn-more {
+            color: blue;
+            cursor: pointer;
+        }
+footer {
+    background: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <h1>Our Eye Care Projects</h1>
+        <p class="project-description">Here are some impactful projects that our NGO has undertaken. Click each project to learn more about it.</p>
+        <div class="project-grid">
+            <!-- Project 1 -->
+            <div class="project">
+                <img src="spectacle1.jpg" alt="Free Spectacles" class="project-image"> 
+				<h2>Eye Health Awareness Drive</h2>
+                <p>We began our Eye Health Awareness Drive with an initial group of 50 students from local schools.</p>
+                <span class="learn-more" id="learn-more1" onclick="toggleDescription('more1', 'learn-more1')">Learn more</span>
+                <div id="more1" class="more-content">
+                    <p>Each student received a thorough eye examination, and those with identified issues were provided with corrective eyewear, including free spectacles tailored to their specific needs. By raising awareness about eye health and its importance in education, we aim to ensure that no child is held back by preventable vision impairments.</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project">
+                <img src="vision-screening.jpeg" width= "300" height= "300" >
+				<h2>Vision Screening Program</h2>
+                <p>In our Vision Screening Program, we expanded our efforts to reach an additional 100 students.</p>
+                <span class="learn-more" id="learn-more2" onclick="toggleDescription('more2', 'learn-more2')">Learn more</span>
+                <div id="more2" class="more-content">
+                    <p>This project focused on providing free vision screenings to detect any vision impairments. Each student underwent a comprehensive eye examination, and those needing corrective lenses received free spectacles to help them see better in their studies.</p>
+                </div>
+            </div>
+			
+            <!-- Project 3 -->  
+            <div class="project">
+                <img src="eye-care-initiative.jpg" width= "300" height= "300" >
+				<h2>Eye Care Access Initiative</h2>
+                <p>Our Eye Care Access Initiative aimed to extend our services to underserved areas, starting with a target of 150 students.</p>
+                <span class="learn-more" id="learn-more3" onclick="toggleDescription('more3', 'learn-more3')">Learn more</span>
+                <div id="more3" class="more-content">
+                    <p>We organized mobile eye clinics that visited local communities, offering free eye tests and consultations. Each student received personalized attention, and those diagnosed with vision issues were provided with free spectacles to address their specific needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleDescription(contentId, linkId) {
+            var content = document.getElementById(contentId);
+            var link = document.getElementById(linkId);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                link.style.display = "none"; // Hide the Learn More link
+            }
+        }
+    </script>
+	
+<footer>
+ <p>&copy; 2024 Clear Vision NGO. All rights reserved.</p>
+ <a href="index.html">Back to Home Page</a>
+ </footer>
+ 
+</body>
+</html>

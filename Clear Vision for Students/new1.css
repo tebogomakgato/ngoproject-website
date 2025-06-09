@@ -1,0 +1,99 @@
+.address-box {
+            background-color: blue;
+            color: white;
+            width: 450px ;
+            padding: 10px;
+            box-sizing: border-box;
+	
+        }
+		main {
+			max-width: 800px;
+			margin: 20px auto;
+			background-color: #fff;
+			padding: 20px;
+			box-shodow:  0 0 10px rgba(0, 0, 0 0.1);
+		}
+	
+        
+        .map-box iframe {
+            width: 600px;
+            height: 450px;
+            border: 0;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: no-space;
+            margin-top: 20px;
+        }
+
+        input[type=text], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 10%;
+            background-color: blue;
+            color: white;
+            padding: 7px;
+            border: none;
+            border-radius: 1px;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+		body{
+			display: flex;
+			justify-content: center;
+			align-items;
+			height: 100vh;
+			margin: 0;
+		}
+		p {
+			front-size: 200px
+			text-align: center;
+		}
+
+        div {
+            border-radius: 5px;
+            background-color: white;
+            padding: 8px;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 10px;
+            margin-right: 10px;
+        }
+
+        .form-group:last-child {
+            margin-right: 0;
+        }
+
+        .message-box {
+            margin-top: 20px;
+        }
+		main {
+		padding: 10px;
+		}
+		.projec-description {
+			text-align: center 
+			font-size:1.2em;
+			color: #333;
+			margin:10 px 0 20px;
+			padding: 0 15px;

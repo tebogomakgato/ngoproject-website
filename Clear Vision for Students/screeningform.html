@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Screening Form</title>
+	
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+
+header {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #4CAF50 
+    margin-bottom: 20px;
+}
+
+/* Booking Section Styles */
+.booking-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures the section takes full height of the viewport */
+}
+
+.container {
+    background-color: white; /* White background for the form box */
+    padding: 40px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow around the form */
+    width: 100%;
+    max-width: 500px; 
+    text-align: center; 
+}
+
+.container h2 {
+	color: #4CAF50;
+	 text-align: center;
+    
+}
+
+.container p {
+    color: #000000; /* Black text for paragraph */
+    margin-bottom: 30px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #000000; /* Black */
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50; /* Green for submit button */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none; /* Removes the default border */
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #4CAF50; /* Darker blue on hover */
+}
+
+footer {
+    background-color: #4CAF50; /* Muted blue-grey */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+	</style>
+</head>
+<body>
+   
+
+   <!-- Booking Section with Booking Form -->
+    <section class="booking-section" id="booking-form">
+        <div class="container">
+            <h2>Book Your Vision Screening</h2>
+            <p>Schedule a vision screening appointment for your child today. Simply fill out the form below, and our team will confirm your booking.</p>
+
+            <form action="submit_screening.html" method="POST">
+                <label for="student-name">Student Name:</label>
+                <input type="text" id="student-name" name="student-name" required><br>
+
+                <label for="guardian-name">Student Number:</label>
+                <input type="text" id="guardian-name" name="guardian-name" required><br>
+
+                <label for="contact-email">Contact Email:</label>
+                <input type="email" id="contact-email" name="contact-email" required><br>
+
+                <label for="date">Preferred Screening Date:</label>
+                <input type="date" id="date" name="date" required><br>
+
+                <input type="submit" value="Book Now">
+            </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Clear Vision NGO. All rights reserved.</p>
+    </footer>
+</body>
+</html>

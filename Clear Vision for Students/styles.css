@@ -1,0 +1,103 @@
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+	
+}
+
+header {
+    background-color: #004d99;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    margin: 0;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+}
+
+.testimonials {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.testimonials h2 {
+    margin-bottom: 20px;
+}
+
+.slide {
+    display: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Make the first slide visible */
+.slide:first-child {
+    display: block;
+}
+
+.address {
+    text-align: center;
+    background-color: #004d99;
+    color: white;
+    padding: 30px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.services {
+    padding: 30px;
+    text-align: center;
+}
+
+.service-item {
+    margin-bottom: 30px;
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+}
+
+.service-item a {
+    text-decoration: none;
+    color: #4F75FF;
+    font-weight: bold;
+}
+
+
+
+
+

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Eye Testing Form</title>
+	<style>
+	body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-grid label {
+            font-size: 14px;
+            color: #000000;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        .btn {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #4CAF50;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+	</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Eye Testing Form</h1>
+    <form id="eyeTestForm">
+        <div class="form-grid">
+            <div>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <span class="error" id="nameError"></span>
+            </div>
+
+            <div>
+                <label for="studentId">Student ID:</label>
+                <input type="text" id="studentId" name="studentId" required>
+                <span class="error" id="studentIdError"></span>
+            </div>
+
+            <div>
+                <label for="university">University Name:</label>
+                <input type="text" id="university" name="university" required>
+            </div>
+
+            <div>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required min="18">
+            </div>
+
+            <div>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="1234567890">
+            </div>
+
+            <div class="full-width">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="wearGlasses">Do you currently wear glasses or contact lenses?</label>
+                <select id="wearGlasses" name="wearGlasses" required>
+                    <option value="">Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="prescription">If yes, what is your prescription? (Optional)</label>
+                <input type="text" id="prescription" name="prescription">
+            </div>
+
+            <div class="full-width">
+                <label for="symptoms">Describe any symptoms you are experiencing:</label>
+                <textarea id="symptoms" name="symptoms" required"></textarea>
+            </div>
+
+            <div>
+                <label for="duration">How long have you been experiencing these symptoms?</label>
+                <select id="duration" name="duration" required>
+                    <option value="">Select Duration</option>
+                    <option value="Less than a month">Less than a month</option>
+                    <option value="1–3 months">1–3 months</option>
+                    <option value="More than 3 months">More than 3 months</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="history">Do you have a history of any eye conditions?</label>
+                <select id="history" name="history" required>
+                    <option value="">Select Condition</option>
+                    <option value="Glaucoma">Glaucoma</option>
+                    <option value="Cataracts">Cataracts</option>
+                    <option value="Astigmatism">Astigmatism</option>
+                    <option value="None">None</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+			
+            <div>
+                <label for="financialHelp">Are you receiving financial assistance or scholarships?</label>
+                <select id="financialHelp" name="financialHelp" required>
+                    <option value="">Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="insurance">Do you have insurance that covers vision care?</label>
+                <select id="insurance" name="insurance" required>
+                    <option value="">Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="donationRequest">Would you like to request assistance from us for an eye exam?</label>
+                <select id="donationRequest" name="donationRequest" required>
+                    <option value="">Select an option</option>
+                    <option value="Eye Exam">Eye Exam</option>
+                    <option value="Glasses">Glasses</option>
+                    <option value="Both">Both</option>
+                </select>
+            </div>
+
+            <div class="full-width">
+                <label for="reason">Please explain why you need support (Optional):</label>
+                <textarea id="reason" name="reason" placeholder="Explain your situation"></textarea>
+            </div>
+
+            <div class="full-width">
+                <label for="consent">Do you consent to sharing this information with our partner optometrists?</label>
+                <select id="consent" name="consent" required>
+                    <option value="">Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="btn">Submit Request</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('eyeTestForm').addEventListener('submit', function(event) {
+        let isValid = true;
+
+        const fullName = document.getElementById('fullName').value.trim();
+        if (fullName === '') {
+            document.getElementById('nameError').textContent = 'Full Name is required';
+            isValid = false;
+        } else {
+            document.getElementById('nameError').textContent = '';
+        }
+
+       
+        const studentId = document.getElementById('studentId').value.trim();
+        if (studentId === '') {
+            document.getElementById('studentIdError').textContent = 'Student ID is required';
+            isValid = false;
+        } else {
+            document.getElementById('studentIdError').textContent = '';
+        }
+
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+</script>
+
+</body>
+</html>
